@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Your Cart | RADO</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <script src="bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="inner-long-page">
+
+    <div class="nav">
+        <img src="img/RADO_LOGO.jpg" alt="Logo" class="img-logo">
+        <ul class="menu">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Collection.html">Collection</a></li>
+            <li><a href="category.html">Category</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="cart-icon-container">
+            <a href="cart.html" class="cart-link">
+                <i class="fa-solid fa-cart-shopping" style="font-size: 20px;"></i>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+        <i class="fa-solid fa-bars ham-burger"></i>
+    </div>
+
+    <section class="section-wrap light-bg">
+        <div class="section-heading">
+            <h2>Shopping Benefits</h2>
+            <p>Every order includes premium service standards.</p>
+        </div>
+        <div class="inner-info-grid">
+            <article class="inner-info-card">
+                <h3>Secure Checkout</h3>
+                <p>Encrypted payment process to keep every transaction protected.</p>
+            </article>
+            <article class="inner-info-card">
+                <h3>Fast Delivery</h3>
+                <p>Safe and insured delivery with careful packaging support.</p>
+            </article>
+            <article class="inner-info-card">
+                <h3>Official Warranty</h3>
+                <p>All products include genuine brand warranty and post-sale care.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="section-wrap dark-bg">
+        <div class="section-heading white-text">
+            <h2>Recommended Picks</h2>
+            <p>Customers also like these best-selling looks.</p>
+        </div>
+        <div class="gallery-grid">
+            <img src="img/centrix.avif" alt="Centrix recommendation">
+            <img src="img/capitalTook.webp" alt="Captain Cook recommendation">
+            <img src="img/true.avif" alt="True recommendation">
+            <img src="img/hyperchrome.avif" alt="HyperChrome recommendation">
+        </div>
+    </section>
+
+    <div class="container cart-container">
+        <h2 class="cart-title">YOUR SHOPPING CART</h2>
+
+        <div class="table-responsive">
+            <table class="table align-middle">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- Cart items will be injected here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-6 offset-md-6">
+                <div class="card p-4">
+                    <h4 class="mb-4">Cart Total</h4>
+                    <div class="d-flex justify-content-between mb-4">
+                        <span class="fw-bold">Total Amount:</span>
+                        <span class="fw-bold fs-4" id="cart-total-price">₹0</span>
+                    </div>
+                    <button class="btn btn-dark w-100 py-3" onclick="alert('Proceeding to checkout...')">PROCEED TO
+                        CHECKOUT</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="rado-footer">
+        <div class="footer-container">
+            <!-- COLUMN 1 -->
+            <div class="footer-col">
+                <h3>RADO</h3>
+                <p>
+                    Rado is renowned for innovative design and use of revolutionary
+                    materials to create timeless Swiss watches.
+                </p>
+            </div>
+            <!-- COLUMN 2 -->
+            <div class="footer-col">
+                <h4>Collections</h4>
+                <ul>
+                    <li><a href="#">Captain Cook</a></li>
+                    <li><a href="#">Centrix</a></li>
+                    <li><a href="#">True</a></li>
+                    <li><a href="#">Ceramica</a></li>
+                    <li><a href="#">DiaStar</a></li>
+                </ul>
+            </div>
+            <!-- COLUMN 3 -->
+            <div class="footer-col">
+                <h4>Customer Care</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Warranty</a></li>
+                    <li><a href="#">Service Centers</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <!-- COLUMN 4 -->
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">YouTube</a>
+                </div>
+            </div>
+        </div>
+        <!-- COPYRIGHT -->
+        <div class="footer-bottom">
+            © 2026 RADO Watches. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
