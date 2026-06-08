@@ -7,7 +7,39 @@ document.addEventListener('DOMContentLoaded', () => {
     initForms();
     initRevealAnimation();
     initSmoothScroll();
+    initMobileMenu();
 });
+
+function initMobileMenu() {
+    const hamburger = document.querySelector('.ham-burger');
+    const menu = document.querySelector('.menu');
+    if (!hamburger || !menu) return;
+
+    hamburger.addEventListener('click', () => {
+        const isOpen = menu.style.display === 'flex';
+        menu.style.display = isOpen ? 'none' : 'flex';
+        hamburger.classList.toggle('fa-bars', isOpen);
+        hamburger.classList.toggle('fa-xmark', !isOpen);
+    });
+
+    menu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                menu.style.display = 'none';
+                hamburger.classList.add('fa-bars');
+                hamburger.classList.remove('fa-xmark');
+            }
+        });
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            menu.style.display = '';
+            hamburger.classList.add('fa-bars');
+            hamburger.classList.remove('fa-xmark');
+        }
+    });
+}
 
 function initCart() {
     updateCartCount();

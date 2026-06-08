@@ -4,6 +4,20 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .img-logo {
     height: 80px;
     width: 80px;
@@ -16,6 +30,9 @@
     justify-content: space-between;
     background-color: rgb(45, 47, 50);
     padding: 5px 20px;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .menu {
@@ -169,18 +186,43 @@ about.p {
 @media screen and (max-width: 768px) {
     .ham-burger {
         display: block !important;
+        order: 3;
+        margin-left: auto;
+    }
+
+    .cart-icon-container {
+        order: 2;
+    }
+
+    .img-logo {
+        height: 55px;
+        width: 55px;
     }
 
     .menu {
         position: absolute;
-        top: 100px;
+        top: 100%;
         left: 0;
         width: 100%;
-        background: aqua;
+        background: rgb(45, 47, 50);
         flex-direction: column;
         display: none;
         z-index: 1000;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        order: 4;
+    }
 
+    .menu li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .menu li a {
+        font-size: 18px;
+        padding: 14px 20px;
+    }
+
+    .cart-link {
+        margin-left: 0;
     }
 }
 
@@ -1150,6 +1192,11 @@ body {
 }
 
 @media (max-width: 768px) {
+    .hero-long {
+        min-height: 70vh;
+        padding: 30px 20px;
+    }
+
     .hero-overlay p {
         font-size: 15px;
     }
@@ -1165,5 +1212,157 @@ body {
     .timeline-item {
         grid-template-columns: 1fr;
         gap: 6px;
+    }
+
+    .section-wrap {
+        padding: 40px 20px;
+    }
+
+    .showcase-card img {
+        height: 220px;
+    }
+
+    .gallery-grid img {
+        height: 180px;
+    }
+
+    .carousel-img {
+        height: 280px;
+    }
+
+    .about-section {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .about-text,
+    .about-image {
+        width: 100%;
+    }
+
+    .about-text h1 {
+        font-size: 32px;
+        margin-bottom: 25px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .product-grid {
+        padding: 20px 15px;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .collection-grid {
+        padding: 0 15px;
+        gap: 20px;
+    }
+
+    .rado-collections {
+        padding: 30px 15px;
+    }
+
+    .page-title,
+    .collection-page-title {
+        padding: 20px 15px 10px;
+        font-size: 18px;
+    }
+
+    .collection-subtitle {
+        padding: 0 15px;
+        font-size: 14px;
+    }
+
+    .category-hero {
+        padding: 40px 20px;
+    }
+
+    .category-hero h1 {
+        font-size: 26px;
+    }
+
+    .contact-section h1 {
+        font-size: 30px;
+    }
+
+    .cart-container {
+        padding: 30px 15px;
+    }
+
+    .cart-title {
+        font-size: 22px;
+    }
+
+    .footer-col h4 {
+        margin-left: 0;
+    }
+
+    .social-icons a {
+        margin-left: 0;
+    }
+
+    .newsletter-form input {
+        min-width: 100%;
+    }
+
+    .newsletter-form button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu li a {
+        font-size: 16px;
+        padding: 12px 16px;
+    }
+
+    .img-logo {
+        height: 48px;
+        width: 48px;
+    }
+
+    .collection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .collection-card img {
+        height: 200px;
+    }
+
+    .product-card img {
+        height: 200px;
+    }
+
+    .trending {
+        padding: 30px 15px;
+    }
+
+    .footer-container {
+        padding: 30px 20px;
+        gap: 25px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .product-grid {
+        padding: 30px 40px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .collection-grid {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 30px;
+    }
+
+    .about-section {
+        padding: 40px 30px;
+        gap: 40px;
+    }
+
+    .about-text h1 {
+        font-size: 38px;
     }
 }
